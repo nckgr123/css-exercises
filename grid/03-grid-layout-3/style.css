@@ -25,18 +25,29 @@
   display: grid;
   grid-template-columns: 1fr 2fr;
 }
+.header .logo{
+  text-align: left;
+}
+.menu{
+  align-items: center;
+  display: grid;
+}
 .menu ul{
   display: grid;
   grid-template-columns: repeat(4,1fr);
+  align-items: center;
 }
 .menu ul,
 .menu li {
   font-size: 16px;
+  list-style: none;
 }
 
 .sidebar {
   background-color: #C50208;
   grid-row: 2 / 4;
+  display: grid;
+  gap: 25px;
 }
 
 .sidebar .photo {
@@ -58,19 +69,25 @@
 .nav {
   background-color: #C50208;
   grid-area: 2 / 2 / 3 / 3;
+  display: grid;
+  align-items: center;
 }
-
+.nav ul{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
 .nav ul li {
   font-size: 16px;
   text-transform: uppercase;
+  list-style: none;
 }
 
 .article {
   background-color: #bccbde;
-  grid-area: 3/2/ 4/ 3;
+  grid-area: 3/2/ 4/3;
 
   display: grid;
-  grid: 1fr/repeat(8,200px);
+  grid: 1fr/repeat(auto-fit,minmax(200px, 1fr));
   gap: 15px;
   padding: 15px;
 }
